@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n,c=0;
+	cin>>n;
+	for(int i=2;i<=10000000;i++){
+		int j=i;
+		int s=1,flag=0;
+		
+		while(j){
+			int k=j%10;
+			if(k<2){
+				flag=1;
+				break;
+			}
+			else{
+				s=s*k;
+				j=j/10;
+			}
+		}
+		if(s==n && flag==0){
+			c++;
+		}
+	}
+	cout<<c<<endl;
+}
