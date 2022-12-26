@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+int sum(int t){
+	int sum=0;
+	while(t!=0)
+	{
+		int j=t%10;
+		sum=(sum+j);
+		t=t/10;
+	}
+	return sum;
+}
+int main() {
+	int n,t,l;
+	cin>>n;
+	for(int i=0;i<n;i++)
+	{
+		cin>>t;
+		
+		while(sum(t)%4!=0){
+			t++;
+		}
+		cout<<t<<endl;
+	}
+}
