@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+int palindrome(int n){
+    int g;
+    g=n;
+    int s=0;
+    int count=0;
+    int t;
+    while(n!=0){
+        t=n%10;
+        s=(s*10)+t;
+        n=n/10;
+    }
+    if(g==s){
+        count++;
+    }
+    return count;
+}
+int main()
+{
+    int a;
+    cin>>a;
+    int p,q;
+    // for(int i=0;i<a;i++){
+    //     cin>>p>>q;
+    // }
+    while(a--){
+        int c=0;
+        cin>>p>>q;
+        for(int i=p;i<=q;i++){
+            //int r=i;
+            int k=palindrome(i);
+            if(k!=0){
+                c+=1;
+            }
+        }cout<<c<<endl;
+    }
+}
+    
