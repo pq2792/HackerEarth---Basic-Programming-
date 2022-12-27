@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+		int n,cost,w=0;
+		cin>>n>>cost;
+		int a[n];
+		for(int i=0;i<n;i++){
+			cin>>a[i];
+		}
+		int sum=0,q=0;
+		for(int i=0;i<n;i++){
+			sum=sum+a[i];
+			while(sum>cost){
+				sum=sum-a[q];
+				q++;
+			}
+			if(sum==cost){
+				w=1;
+				break;
+			}
+
+		}
+		if(w==1){
+			cout<<"YES"<<endl;
+		}
+		else
+		{
+			cout<<"NO"<<endl;
+		}
+	}
+}
