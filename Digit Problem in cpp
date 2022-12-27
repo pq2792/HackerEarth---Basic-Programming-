@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	string s;
+	long long int k;
+	int i;
+	cin>>s>>k;
+	for(i=0;i<s.length();i++){
+		if(s[i]!='9' && k>0){
+			s[i]='9';
+			k--;
+		}
+		
+		cout<<s[i];
+	}
+}
