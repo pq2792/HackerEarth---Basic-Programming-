@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int tc;
+	char s[200];
+	cin>>tc;
+	for(int i=0;i<tc;i++){
+		cin>>s;
+
+		int c=0;
+		int l=strlen(s);
+		for(int i=0;i<l;i++){
+			if(s[i]=='a' || s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u'){
+				c++;
+			}
+		}
+		cout<<l-c-3<<"/"<<l<<endl;
+	}
+
+}
