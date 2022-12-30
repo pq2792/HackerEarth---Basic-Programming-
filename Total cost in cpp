@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main() {
+	long int p,h;
+	int s;
+	int t;
+	int x;
+	int sum=0;
+	cin>>p>>s>>t>>h>>x;
+	for(int i=0;i<x;i++){
+		if(s>t){
+			sum+=p;
+		}
+		else{
+			sum+=h;
+		}
+		s--;
+	}
+	cout<<sum;
+}
