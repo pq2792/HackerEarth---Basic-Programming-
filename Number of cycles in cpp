@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+	long long int n;
+	cin>>n;
+	long long int q;
+	
+	while(n--){
+		cin>>q;
+		long long int a=0;
+		a=2*q-1+(q-1)*(q-2);
+		
+		cout<<a<<endl;
+	}
+}
